@@ -1,0 +1,39 @@
+{% extends 'manager/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <style>
+    a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+<h2 style="text-align:center; color:blue;">ADD CLAIMS</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+     <label for="course_name">Category</label>
+      {% render_field claimForm.category class="form-control" placeholder="vehicle Insurance" %} 
+
+        <label for="course_name">Policy Name</label>
+      {% render_field claimForm.claim_name class="form-control" placeholder="Policy Name" %}
+    </div>
+    
+    
+<br>
+    <button type="submit" class="btn btn-primary">ADD</button>
+  </form>
+<br><br><br><br>
+{% endblock content %}

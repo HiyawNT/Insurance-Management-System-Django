@@ -1,0 +1,50 @@
+{% extends 'manager/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <style>
+    a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+<h2 style="text-align:center; color:blue;">ADD POLICY</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="course_name">Category</label>
+      {% render_field policyForm.category class="form-control" placeholder="Life Insurance" %}
+
+        <label for="course_name">Policy Name</label>
+      {% render_field policyForm.policy_name class="form-control" placeholder="Policy Name" %}
+
+     <label for="course_name">Sum Assurance</label>
+      {% render_field policyForm.sum_assurance class="form-control" placeholder="100000" %}
+
+    <label for="course_name">Premium</label>
+      {% render_field policyForm.premium class="form-control" placeholder="5000" %}
+
+          <label for="course_name">Tenure</label>
+      {% render_field policyForm.tenure class="form-control" placeholder="12" %}
+
+
+    </div>
+    
+    
+<br>
+    <button type="submit" class="btn btn-primary">ADD</button>
+  </form>
+<br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+{% load sweetify %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <style>
+    a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+<h2 style="text-align:center; color:#303179;">Make Payments</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for msg in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong> {{ msg }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    
+    <div class="form-group">
+     <!--<label for="Bank Name">Bank Name:</label>
+     {% render_field PaymentForm.bank_name class="form-control" placeholder="Bank Name" %}  
+      
+    <label for='payment type'>Payment Type</label>
+     {% render_field PaymentForm.payment_type|attr:'required:true' class="form-control" placeholder="Account Number" %}
+        --> 
+    <label for="Account Number">Account Number</label>
+      {% render_field PaymentForm.account_no|attr:'required:true' class="form-control" placeholder="Account Number" %}
+
+  <!--    <label for="Account Number">Amount Paid</label>
+      {% render_field PaymentForm.payment_amount|attr:'required:true' class="form-control" placeholder="amount" %}
+
+-->
+
+   <label for="Payment Proof">Proof Of Payment</label>
+    {% render_field PaymentForm.payment_proof|attr:'required:true' class="form-control" placeholder="" %} 
+    
+    <label for="Transaction Id">Transaction ID</label>
+    {% render_field PaymentForm.transaction_id|attr:'required:true'  class="form-control"  placeholder="" %}
+
+
+    </div>
+    
+    
+<br>
+
+<!-- JavaScript -->
+    <button type="submit"  class="btn btn-primary">Verify</button>
+  </form>
+<br><br><br><br>
+{% endblock content %}

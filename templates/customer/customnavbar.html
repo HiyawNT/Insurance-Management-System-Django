@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ethiopian Insurance Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/img/logo-final.png' %}">
+
+  <!-- CSS
+      ============================================ -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-all.min.css' %}">
+
+  <!-- Swiper slider CSS -->
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+
+  <!-- Animate text CSS -->
+  <link rel="stylesheet" href="{% static 'css/plugins/animate-text.css' %}">
+
+  <!-- AOS CSS -->
+  <link href="{% static 'css/plugins/aos.css' %}" rel="stylesheet">
+
+  <!-- Some Plugins CSS -->
+  <link href="{% static 'css/plugins/some-plugins.min.css' %}" rel="stylesheet">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="{% static 'css/plugins/animate.min.css' %}">
+
+
+  <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+  <!--
+      <link rel="stylesheet" href="css/vendor/vendor.min.css">
+      <link rel="stylesheet" href="css/plugins/plugins.min.css">
+      -->
+
+  <!-- Main Style CSS -->
+  <link rel="stylesheet" href="{% static 'css/customnavbarstyle.css' %}">
+
+</head>
+
+<body>
+
+  <body>
+
+
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+        <!-- Header Top Wrap Start -->
+        <div class="header-top-wrap theme-bg-three">
+            <div class="containersignup">
+                <div class="row align-items-center">
+                    <div class="col-md-4  col-6">
+                        <a href="landing-page">
+                            <img src="{% static 'images/img/logo-final.png' %}" class="img-fluid" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6  d-md-block d-none">
+                        <p class="top-message text-md-center"><a href="loginopt">Login</a> <span class="text-white"> / </span> <a href="#">Register</a> </p>
+                    </div>
+                    <div class="col-md-4  col-6">
+                        <!-- header right box -->
+                        <div class="header-right-box">
+                            <!-- this is for the mobile view content-->
+                            <div class="header-right-inner" id="hidden-icon-wrapper">
+
+                                <p class="mobile-top-message d-block d-md-none"><a href="#">Login</a><span> / </span><a href="#">Register</a> </p>
+                              
+                            <!-- hidden icons menu -->
+                            <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Wrap End -->
+
+
+  <!-- <div class="bs-example">
+    <nav class="navbar navbar-expand-md  navbar-dark bg-success fixed-top" s>
+    <a style="color: #ffffff;text-decoration: none; " href="/"><font face = "Gill" size =" 5">Insurance Management System</font><br /></a>  
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <p style="
+          padding-left: 15px;
+      "  class="nav-item nav-link active"></p>
+
+          <a href="/customer/customerclick" class="nav-item nav-link">Customer</a>
+          
+          <a href="/adminlogin" class="nav-item nav-link">Admin</a> -->
+
+
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--====================  scroll top ====================-->
+      <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top fa fa-angle-double-up"></i>
+        <i class="arrow-bottom fa fa-angle-double-up"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="landing-page">
+                                    <img src="{% static 'images/img/logo-final.png' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children">
+                            <a href="landing-page">Home</a>
+
+                        </li>
+                        <li class="has-children">
+                            <a href="about-us">About</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="product&services">Product & services</a>
+                            <ul class="sub-menu">
+                                <li><a href="#"><span>Vehicle Insurance </span></a></li>
+                                <li><a href="#"><span>Long term Vehicle Insurance</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="blog">Blog</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="contact-us"><span>Contact</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="{%static 'js/plugins/swiper.min.js' %}"></script>
+
+    <!-- Waypoints JS -->
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+
+    <!-- Counter down JS -->
+    <script src="{% static 'js/plugins/countdown.min.js' %}"></script>
+
+    <!-- Isotope JS -->
+    <script src="{% static 'js/plugins/isotope.min.js' %}"></script>
+
+    <!-- Masonry JS -->
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+
+    <!-- ImagesLoaded JS -->
+    <script src="{% static 'js/plugins/images-loaded.min.js' %}"></script>
+
+    <!-- Counterup JS -->
+    <script src="{% static 'js/plugins/counterup.min.js' %}"></script>
+
+    <!-- WOW JS -->
+    <script src="{% static 'js/plugins/wow.min.js' %}"></script>
+
+    <!-- AOS JS -->
+    <script src="{% static 'js/plugins/aos.js' %}"></script>
+
+    <!-- Some plugins JS -->
+    <script src="{% static 'js/plugins/some-plugins.js' %}"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+    <!--
+    <script src="js/plugins/plugins.min.js"></script>
+    -->
+
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOTOR INSURANCE PROPOSAL FORM</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/registration_style.css' %}">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+            </div>
+            <div class="signup-form">
+    <form method="POST" autocomplete="off" class="register-form" id="register-form">
+         {% csrf_token %}
+                    
+                    
+                    <h2 align="center">MOTOR INSURANCE PROPOSAL FORM</h2><br>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">First Name of the proposer:</label>
+                            {% render_field PolicyForm.proposer_name class="form-control" placeholder="First Name" %}  
+
+                        </div>
+            <div class="form-group">
+                <label for="father_name">Father Name :</label>
+                {% render_field PolicyForm.father_name class="form-control" placeholder="Father Name" %}  
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="age">age :</label>
+                {% render_field PolicyForm.age class="form-control" placeholder="Age" %}  
+            </div>
+            <div class="form-group">
+                <label for="address">Address :</label>
+                {% render_field PolicyForm.address class="form-control" placeholder="Address" %}  
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="profession">Trade or Profession</label>
+                {% render_field PolicyForm.profession class="form-control" placeholder="Profession" %}  
+
+            </div>
+            <div class="form-group">
+                <label for="phone">Telephone No :</label>
+                {% render_field PolicyForm.phone_no class="form-control" placeholder="Phone No" %}  
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="pobox">P.O. Box </label>
+                {% render_field PolicyForm.pobox class="form-control" placeholder="P.O Box" %}  
+            </div>
+            <div class="form-group">
+                <label for="licence">License Number</label>
+                {% render_field PolicyForm.licenceno class="form-control" placeholder="License Number" %}  
+
+            </div>
+        </div>
+        <h2 align="center">Period of Insurance</h2><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="birth_date">From</label>
+                {% render_field PolicyForm.durationfrom class="form-control" placeholder="20-05-2020" %}  
+            </div>
+            <div class="form-group">
+                <label for="birth_date">To</label>
+                {% render_field PolicyForm.durationto class="form-control" placeholder="20-06-2022" %}  
+
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="state"> select policy</label>
+                <div class="form-select">
+                    {% render_field PolicyForm.policychoice class="form-control" placeholder="" %}  
+                    <br>
+
+        </div>
+        <h2 align="center">MOTOR INSURANCE PROPOSAL FORM</h2><br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="plate-no"> Plate Number</label>
+                <div class="form-select">
+                    {% render_field PolicyForm.plateno class="form-control" placeholder="AA89842" %}  
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-name">Vehicle Name </label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field PolicyForm.vehiclename class="form-control" placeholder="Vehicle Name" %}  
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="vehicle-model">Vehicle Model</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field PolicyForm.vehiclemodel class="form-control" placeholder="Vehicle Model" %}
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-model">Year Of Manufacture</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field PolicyForm.yearofmanufacture class="form-control" placeholder="Manufactured Date" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="vehicle-model">Year Purchased</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field PolicyForm.yearofpurchase class="form-control" placeholder="Purchased Year" %}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-model">Price Paid by Proposer</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field PolicyForm.priceofcar class="form-control" placeholder="Price of The Car" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-submit">
+            <!-- <input type="submit" value="Reset All" class="submit" name="reset" id="reset" /> -->
+            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+        </div>
+    </form>
+
+
+
+
+
+        <!-- For additional Information OPTIONAL -->
+        <!-- <div class="form-group">
+            <label for="birth_date">DOB :</label>
+            <input type="date" name="birth_date" id="birth_date">
+        </div>
+        <div class="form-group">
+            <label for="pincode">Pincode :</label>
+            <input type="text" name="pincode" id="pincode">
+        </div>
+        <div class="form-group">
+            <label for="course">Course :</label>
+            <div class="form-select">
+                <select name="course" id="course">
+                                    <option value=""></option>
+                                    <option value="computer">Computer Operator & Pragramming Assistant</option>
+                                    <option value="desiger">Designer</option>
+                                    <option value="marketing">Marketing</option>
+                                </select>
+                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID :</label>
+            <input type="email" name="email" id="email" />
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+        </div> -->
+        </form>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

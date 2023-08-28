@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load widget_tweaks %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EIC Claim Form</title>
+
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/registration_style.css' %}">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+            </div>
+            <!-- Description Start -->
+            <div class="signup-form">
+                <label method="POST" class="register-form" id="register-form">
+                    <h2 align="center"><u>MOTOR ACCIDENT CLAIM FORM</u></h2><br>
+                    <h4 align="center"><u> DEAR POLICY HOLDER</u></h4><br>
+                    <p align="center"><span>Our aim is not only to pay your claims but also to protect and assist you. For this purpose, it is indispensable that
+                        you collaborate with us right now when completing this form. It is necessary that great care should be taken in supplying
+                        the information set out below and the statements given should be strictly accurate, irrespective of whether the facts are in
+                        your favour or otherwise</span></p>
+                        <p align="center"><span>You should not make any payment offer or promise of any payment or admit liability in any way, as by so doing 
+                            you may prejudice your position and make settlement a difficult matter. </span></p>
+                            <p align="center"><span>If you have received any communications, verbal or written, please inform us forwarding all letters, etc, without 
+                                replying thereto. Please note that the issue of this form is not an admission f liability on the part of the Corporation. </span></p>
+                                <p align="center"><a href="claim-translated">Translate in Amharic</a></p>
+                    
+                                <!-- spacer -->
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                <!-- Description End -->
+
+
+                <!-- Form Start -->
+
+                <h2 align="center"><u>Notification of Motor Accident</u></h2><br>
+
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name of the Insured</label>
+                        {% render_field ClaimForm.insured_name class="form-control" placeholder="የመድን ገቢው ሙሉ ስም" %} 
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Telephone No :</label>
+                {% render_field ClaimForm.phone_no class="form-control" placeholder="ስልክ ቁጥር" %} 
+            </div>
+            <div class="form-group">
+                <label for="address">Address :</label>
+                {% render_field ClaimForm.address class="form-control" placeholder="አድራሻ " %} 
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="profession">Occupation</label>
+                {% render_field ClaimForm.profession class="form-control" placeholder="ሙያ " %} 
+            </div>
+
+        </div>
+        <br>
+        <hr class="bold">
+        <br>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="policyno">Policy Number </label>
+                {% render_field ClaimForm.policy_number class="form-control" placeholder="የፖሊሲ ቁጥር " %} 
+            </div>
+            <div class="form-group">
+                <label for="policyno">Renewal Date</label>
+                {% render_field ClaimForm.renewal_date class="form-control" placeholder="የፖሊሲ የእድሳት ቀን" %} 
+            </div>
+        </div>
+        <hr class="bold"><br>
+        <div class="spacer"></div>
+        <!-- Section One End -->
+
+
+        <!-- Section Two  Start-->
+
+        <h2 align="center"><u>Insured Vehicle</u></h2><br>
+        <!-- First Row Start -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="make"> Make</label>
+                <div class="form-select">
+                    {% render_field ClaimForm.vehiclemodel class="form-control" placeholder="የመኪና ሞዴል " %} 
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-model">Year Of Manufacture </label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field ClaimForm.yearofmanufacture class="form-control" placeholder="የምርት ዓመት  " %} 
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="plate-no"> Plate Number</label>
+                <div class="form-select">
+                    {% render_field ClaimForm.plateno class="form-control" placeholder="የሰሌዳ ቁጥር" %} 
+
+                </div>
+            </div>
+        </div>
+        <!-- First Row End -->
+
+
+        <!-- Second Row Start -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="vehicle-purpose">For What Purpose It Is Being Used</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field ClaimForm.vehicle_purpose class="form-control" placeholder="ተሽከርካሪው ለምን ጥቅም ላይ ይውላል " %} 
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-model">C.C (Horse Power)</label>
+                <div class="form-select">
+                    <div class="form-select">
+                        {% render_field ClaimForm.horsepower class="form-control" placeholder="የፈረስ ኃይል " %} 
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="carry"> Carrying Capacity & Type</label>
+                    <div class="form-select">
+                        {% render_field ClaimForm.carrying_capacity class="form-control" placeholder="የመሸከም አቅም እና ዓይነት " %} 
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Second Row ENd -->
+
+        <!-- Section Two End -->
+
+        <hr class="bold"><br>
+        <div class="spacer"></div>
+
+        <!-- Section Three Start -->
+
+        <h2 align="center"><u>DRIVER'S INFORMATION AT TIME OF INCIDENT</u></h2><br>
+
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="driver_name">Full Name of The Driver </label>
+                {% render_field ClaimForm.driver_name class="form-control" placeholder="የአሽከርካሪው ሙሉ ስም " %} 
+
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="driver_phone">Telephone No :</label>
+                {% render_field ClaimForm.driver_phone_no class="form-control" placeholder="ስልክ ቁጥር " %} 
+            </div>
+            <div class="form-group">
+                <label for="driver_address">Address :</label>
+                {% render_field ClaimForm.driver_address class="form-control" placeholder="አድራሻ " %} 
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="driver_age">Age:</label>
+                {% render_field ClaimForm.driver_age class="form-control" placeholder="ዕድሜ " %} 
+            </div>
+            <div class="form-group">
+                <label for="driver_occupation">Occupation</label>
+                {% render_field ClaimForm.driver_profession class="form-control" placeholder="ሙያ " %} 
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="licence_number"> Driver's Licence Number</label>
+                {% render_field ClaimForm.licence_number class="form-control" placeholder=" የመንጃ ፍቃድ ቁጥር " %} 
+            </div>
+
+            <div class="form-group">
+                <label for="licence_grade"> Grade of Licence</label>
+                {% render_field ClaimForm.licence_number class="form-control" placeholder="የፍቃድ ደረጃ " %} 
+            </div>
+            <div class="form-group">
+                <label for="licence_expire_date"> Licence Expiry Date</label>
+                {% render_field ClaimForm.licence_expiry_date class="form-control" placeholder="የፍቃድ ጊዜው የሚያበቃበት ቀን " %} 
+            </div>
+
+            <!-- 
+                --------------------------------------------------------------------------------------------
+                ============================================================================================
+                                PROFILE PICTURE GOES HERE
+                                    TO BE ADDED 
+                ============================================================================================
+                --------------------------------------------------------------------------------------------                    
+             -->
+        </div>
+
+        <!-- Section Three End -->
+
+        <hr class="bold"><br>
+        <div class="spacer"></div>
+
+        <!-- Section Four Start -->
+
+
+
+        <h2 align="center"><u> DETAILS OF ACCIDENT </u></h2><br>
+
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="accident_date"> Date</label>
+                {% render_field ClaimForm.accident_date class="form-control" placeholder="ቀን " %} 
+            </div>
+
+            <div class="form-group">
+                <label for="accident_time"> Time</label>
+                {% render_field ClaimForm.accident_time class="form-control" placeholder="ጊዜ " %} 
+            </div>
+            <div class="form-group">
+                <label for="accident_place"> place</label>
+                {% render_field ClaimForm.accident_place class="form-control" placeholder="ቦታ " %} 
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="accident_desc"> Description of the Accident</label>
+                {% render_field ClaimForm.accident_description class="form-control" placeholder="የአደጋው መግለጫ " %} 
+            </div>
+
+
+        </div>
+
+
+        <div class="form-submit">
+            <!-- <input type="submit" value="Reset All" class="submit" name="reset" id="reset" /> -->
+            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+        </div>
+
+    </div>
+
+    </form>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

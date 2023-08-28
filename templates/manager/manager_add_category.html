@@ -1,0 +1,35 @@
+{% extends 'manager/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+  <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+
+  <!-- jQuery JS -->
+  <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+  <style>
+
+  a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+<h2 style="text-align:center; color:blue;">ADD CATEGORY</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="course_name">Category Name</label>
+      {% render_field categoryForm.category_name class="form-control" placeholder="Life Insurance" %}
+
+    </div>
+    
+<br>
+    <button type="submit" class="btn btn-primary">ADD</button>
+  </form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

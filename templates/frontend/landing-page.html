@@ -1,0 +1,778 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ethiopian Insurance Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="images/img/logo-final.png">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-all.min.css' %}">
+
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+
+    <!-- Animate text CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/animate-text.css' %}">
+
+    <!-- AOS CSS -->
+    <link href="{% static 'css/plugins/aos.css' %}" rel="stylesheet">
+
+    <!-- Some Plugins CSS -->
+    <link href="{% static 'css/plugins/some-plugins.min.css' %}" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.min.css' %}">
+
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+    <!--
+        <link rel="stylesheet" href="css/vendor/vendor.min.css">
+        <link rel="stylesheet" href="css/plugins/plugins.min.css">
+        -->
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+        <!-- Header Top Wrap Start -->
+        <div class="header-top-wrap theme-bg-three">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 col-6  d-md-block d-none">
+                        <p class="top-message text-md-center"><a href="customerlogin">Login</a> <span class="text-white"> / </span> <a href="signupopt">Register</a> </p>
+                    </div>
+                    <div class="col-md-4  col-6">
+                        <!-- header right box -->
+                        <div class="header-right-box">
+                            <!-- this is for the mobile view content-->
+                            <div class="header-right-inner" id="hidden-icon-wrapper">
+
+                                <p class="mobile-top-message d-block d-md-none"><a href="customerlogin">Login</a><span> / </span><a href="signupopt">Register</a> </p>
+                                <!-- language-menu -->
+                               
+                            <!-- hidden icons menu -->
+                            <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Wrap End -->
+
+        <!-- Header Bottom Wrap Start -->
+        <div class="header-bottom-wrap header-area--absolute transparent-bg header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header default-menu-style position-relative">
+
+                            <!-- brand logo -->
+                            <div class="header__logo">
+                                <a href="landing-page">
+                                    <img src="{% static 'images/img/logo-final.png' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <!-- header midle box  -->
+                            <div class="header-midle-box">
+                                <div class="header-bottom-wrap d-md-block d-none">
+                                    <div class="header-bottom-inner">
+                                        <div class="header-bottom-left-wrap">
+                                            <!-- navigation menu -->
+                                            <div class="header__navigation d-none d-lg-block">
+                                                <nav class="navigation-menu primary--menu">
+                                                    <ul>
+                                                        <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="landing-page"><span>Home</span></a>
+                                                        </li>
+                                                        <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="about-us"><span>About</span></a>
+                                                        </li>
+                                                        <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="product&services"><span>Products & services</span></a>
+                                                            <ul class="submenu">
+                                                                <li><a href="#"><span>Vehicle Insurance</span></a></li>
+                                                                <li><a href="#"><span>vehicle Long Term Insurance </span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="blog"><span>Blog</span></a>
+                                                        </li>
+
+                                                        <li class="has-children">
+                                                            <a href="contact-us"><span>Contact</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Header Bottom Wrap End -->
+
+
+    </div>
+
+    <!--====================  End of header area  ====================-->
+
+
+    <div class="site-wrapper-reveal">
+
+
+        <!--============ Hero Area Start ============-->
+        <div class="hero-area-wrap">
+            <div class="corporate-hero corporate-bg-02">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!--baseline-->
+                        <div class="col-xl-6 col-lg-8 col-md-9">
+                            <div class="corporate-hero-text wow move-up">
+                                <h4 class="hero-sub-title">Join us today</h4>
+                                <h1 class="font-weight--bold mb-15 section-title">Ethiopian Insurance Corporation (EIC)</h1>
+                                <div class="hero-button mt-30">
+                                    <a href="contact-us" class="ht-btn ht-btn-lg font-weight--bold">Contact us</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="call-to-number">
+                <a href="tel:+251-11551-2400"><img class="img-fluid" src="{% static 'images/img/icons/call-icon.png' %}" alt="">+251-11-551-2400</a>
+            </div>
+        </div>
+        <!--============ Hero Area End ============-->
+
+
+        <!--============ About Area Start ============-->
+        <div class="about-wrapper section-space--ptb_120">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-us-images small-mb__30 tablet-mb__30">
+                            <img class="img-fluid rounded" src="{% static 'images/img/Best-performance-award-2017-2018-2(resized).jpg' %}" alt="About Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-us-content">
+                            <div class="section-title-wrap">
+                                <h6 class="section-sub-title">About us</h6>
+                                <h3 class="mb-10 section-title">Since 1976 ___</h3>
+                                <h3 class="mb-20 section-title">Provide the most <br> Impressive Solutions</h3>
+                                <h4 class="mb-20 font-weight--light">Ethiopian Insurance Corporation (EIC) was established in 1976 by proclamation No.68/1975. </h4>
+                                <p class="mb-40 font-weight--light">The Corporation came into existence by taking over all the assets and liabilities of the thirteen nationalized private insurance companies, with Birr 11 million (USD 1.29 million) paid up capital aiming the following objectives.</p>
+
+                                <div class="about-us-btn-box">
+                                    <a href="/about-us" class="ht-btn ht-btn-sm">About us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============ About Area End ============-->
+        <div class=" section-space--ptb_30"></div>
+
+        <!--============= Brand Area Start ===============-->
+        <div class="brand-area">
+            <div class="container">
+                <h3 class="mb-50 section-title text-center">Major Clients</h3><br><br>
+                <div class="col-lg-12 brand-box-wrap">
+                    <div class="single-brand-box">
+                        <a href="https://www.combanketh.et/en/" target="_blank"><img src="{% static 'images/img/Commercial Bank.jpg' %}" alt=""></a>
+                    </div>
+                    <div class="single-brand-box">
+                        <a href="#" target="_blank"><img src="{% static 'images/img/Total.jpg' %}" alt=""></a>
+                    </div>
+                    <div class="single-brand-box">
+                        <a href="https://www.ethiotelecom.et/" target="_blank"><img src="{% static 'images/img/Ethio telecom.jpg' %}" alt=""></a>
+                    </div>
+                    <div class="single-brand-box">
+                        <a href="https://www.heineken.com/" target="_blank"><img src="{% static 'images/img/Heineken.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= Brand Area End ===============-->
+
+    <!--============ Feature Area Start ============-->
+    <div class="feature-wrapper section-space--ptb_90">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-wrap">
+                        <h6 class="section-sub-title">Features</h6>
+                        <h3 class="mb-20 section-title">These are some of our features <br> Making us your reliable partner</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="feature-images__one modern-grid-image-4">
+
+                        <div class="custom_4 small-mt__30  wow move-up animate">
+                            <!-- ht-box-icon Start -->
+                            <a href="#" class="ht-box-images style-01">
+                                <div class="image-box-wrap">
+                                    <div class="box-image mb-20">
+                                        <img class="img-fulid" src="{% static 'images/img/icons/feature-icon-01.png' %}" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="heading-title mb-15">Qualified Specialist </h4>
+                                        <div class="text">We have one of the most capable and professional specialists for your every need i.e for inspection or managment</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- ht-box-icon End -->
+                        </div>
+
+
+                        <div class="custom_4 active mt-30 mb-30  wow move-up animate">
+                            <!-- ht-box-icon Start -->
+                            <a href="#" class="ht-box-images style-01">
+                                <div class="image-box-wrap">
+                                    <div class="box-image mb-20">
+                                        <img class="img-fulid" src="{% static 'images/img/icons/feature-icon-02.png' %}" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="heading-title mb-15">100% Satisfaction</h4>
+                                        <div class="text">We garantee that you will be satesfied with our services, we are here to make your life better</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- ht-box-icon End -->
+                        </div>
+
+
+                        <div class="custom_4 small-mb__30  wow move-up animate">
+                            <!-- ht-box-icon Start -->
+                            <a href="#" class="ht-box-images style-01">
+                                <div class="image-box-wrap">
+                                    <div class="box-image mb-20">
+                                        <img class="img-fulid" src="{% static 'images/img/icons/feature-icon-03.png' %}" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="heading-title mb-15">Competitive Price</h4>
+                                        <div class="text">what makes as standout is our price fits our customers, We need your saftey the money comes later</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- ht-box-icon End -->
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============ Feature Area End ============-->
+
+
+
+    <!--=========== fun fact Area Start ==========-->
+    <div class="fun-fact-wrapper section-space--ptb_90">
+        <div class="container">
+            <h3 class="mb-50 section-title text-center">Our Visitors</h3><br><br>
+            <div class="fun-fact-style-one row">
+                <div class="single-fun-fact wow move-up">
+                    <div class="fun-fact--one">
+                        <h3 class="fun-fact__count"><span class="counter">337</span></h3>
+                        <span class="fun-fact__text">Today</span>
+                    </div>
+                </div>
+                <div class="single-fun-fact wow move-up">
+                    <div class="fun-fact--one">
+                        <h3 class="fun-fact__count"><span class="counter">536</span></h3>
+                        <span class="fun-fact__text">Yesterday</span>
+                    </div>
+                </div>
+                <div class="single-fun-fact wow move-up">
+                    <div class="fun-fact--one">
+                        <h3 class="fun-fact__count"><span class="counter">13139</span></h3>
+                        <span class="fun-fact__text">This Week</span>
+                    </div>
+                </div>
+                <div class="single-fun-fact wow move-up">
+                    <div class="fun-fact--one">
+                        <h3 class="fun-fact__count"><span class="counter">62182</span></h3>
+                        <span class="fun-fact__text">This Month</span>
+                    </div>
+                </div>
+                <div class="single-fun-fact wow move-up">
+                    <div class="fun-fact--one">
+                        <h3 class="fun-fact__count"><span class="counter">252</span></h3>
+                        <span class="fun-fact__text">Current Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========== fun fact Area End ==========-->
+
+
+
+    <!-- ==========features and core values Start============= -->
+    <div class="choose-us-area section-space--pb_120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="choose-us-images small-mb__30 tablet-mb__30">
+                        <img class="img-fluid rounded" src="{% static 'images/img/logo.jpg' %}" alt="Choose Image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="choose-us-content ">
+                        <div class="section-title-warp">
+                            <h6 class="section-sub-title">Why choose us</h6>
+                            <h3 class="mb-10 section-title">Our core <br> Features</h3>
+                        </div>
+                        <div class="choose-itme-wrap">
+                            <!-- Single Choose Item Start -->
+                            <div class="single-choose-item">
+                                <span class="choose-item-images">
+                                <img class="img-fluid" src="{% static 'images/img/icons/check-icon-01.png' %}" alt="icon">
+                            </span>
+                                <div class="choose-item-text">
+                                    <h4>Transparancy and Accountability</h4>
+                                    <p>We take positive responsibility for the planning, successful execution and delivery of our services</p>
+                                </div>
+                            </div>
+                            <!-- Single Choose Item End -->
+                            <!-- Single Choose Item Start -->
+                            <div class="single-choose-item">
+                                <span class="choose-item-images">
+                                <img class="img-fluid" src="{% static 'images/img/icons/check-icon-01.png' %}" alt="icon">
+                            </span>
+                                <div class="choose-item-text">
+                                    <h4>Team Work</h4>
+                                    <p>We help each other to do better and together we support one another to keep the promise we made to our customers</p>
+                                </div>
+                            </div>
+                            <!-- Single Choose Item End -->
+                            <!-- Single Choose Item Start -->
+                            <div class="single-choose-item">
+                                <span class="choose-item-images">
+                                <img class="img-fluid" src="{% static 'images/img/icons/check-icon-01.png' %}" alt="icon">
+                            </span>
+                                <div class="choose-item-text">
+                                    <h4>Professional Ethics</h4>
+                                    <p>we value Playing a pivotal professional Role aimed at meeting ethical standards in the insurance industry as a whole.</p>
+                                </div>
+                            </div>
+                            <!-- Single Choose Item End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========features and core values End============= -->
+
+
+
+    <!--========== Call to Action Area Start ============-->
+    <div class="cta-image-area_one mb-30">
+        <div class="container">
+            <div class="col cta-bg-image_one" data-overlay="9">
+                <div class="row align-items-center cta-image-box">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="cta-content text-lg-left text-center">
+                            <h3 class="heading text-white">Ethiopia Insurance Corporation <br> Your Reliable Partner</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 small-mt__30">
+                        <div class="cta-button-group--one text-center text-lg-right">
+                            <h3 class="text-white mb-20">+251-11-551-2400</h3>
+                            <a href="#" class="btn btn__secondary">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========== Call to Action Area End ============-->
+
+    <!--==================== Lates Blog Area Start  ====================-->
+    <div class="lates-blog-area section-space--pb_90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- lates Single Blog Start-->
+                    <div class="lates-single-blog mb-30">
+                        <div class="blog-media">
+                            <a href="about-us"><img class="img-fluid" src="{% static 'images/img/blog/blog1.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="post-info lates-blog-post-info">
+                            <div class="post-meta">
+                                <div class="post-date">
+                                    <span class="other_name">EIC </span> - November 30, 2019
+                                </div>
+                            </div>
+
+                            <h4 class="post-title font-weight--bold">
+                                <a href="about-us" class="title--default">Ethiopian Insurance Corporation has paid a claim of above 16.1million birr</a>
+                            </h4>
+
+                            <div class="post-excerpt mt-15">
+                                <p>The Ethiopian Insurance CorporationEIC has paid a claim of Birr 16,154,196 million to Anbessa City Bus Service Enterprise on April 20, 2017 at CEOs meeting hall for property damaged due to fire accident</p>
+                            </div>
+                            <div class="btn-text">
+                                <a href="about-us">Read more >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lates Single Blog End -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- lates Single Blog Start-->
+                    <div class="lates-single-blog  mb-30">
+                        <div class="blog-media">
+                            <a href="about-us"><img class="img-fluid" src="{% static 'images/img/blog/blog2.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="post-info lates-blog-post-info">
+                            <div class="post-meta">
+                                <div class="post-date">
+                                    <span class="other_name">EIC </span> - November 30, 2019
+                                </div>
+                            </div>
+
+                            <h4 class="post-title font-weight--bold">
+                                <a href="about-us" class="title--default">Ethiopian Insurance Corporation (EIC) graduates new trainees</a>
+                            </h4>
+
+                            <div class="post-excerpt mt-15">
+                                <p>The EIC trained 113 new and 26 existing officers and graduated them on June 2017 at the Meeting Hall of its Head Quarters.<br> Present at the graduation ceremony were Mr. Nesanet Lemessa, the Chief of Executive Officer
+                                    of the Corporation and other management members.</p>
+                            </div>
+                            <div class="btn-text">
+                                <a href="about-us">Read more >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lates Single Blog End -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- lates Single Blog Start-->
+                    <div class="lates-single-blog  mb-30">
+                        <div class="blog-media">
+                            <a href="about-us"><img class="img-fluid" src="{% static 'images/img/blog/blog4.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="post-info lates-blog-post-info">
+                            <div class="post-meta">
+                                <div class="post-date">
+                                    <span class="other_name">EIC </span> - November 30, 2019
+                                </div>
+                            </div>
+
+                            <h4 class="post-title font-weight--bold">
+                                <a href="about-us" class="title--default">Ethiopian Insurance Corporation celebrates the 2nd employees day</a>
+                            </h4>
+
+                            <div class="post-excerpt mt-15">
+                                <p>Ethiopian Insurance Corporation has celebrated the 2nd employees day on 12 February ,2017 at Kality on its own sport center in the presence of his Excellency Dr. Sintayehu WoldeMichael, Director General of the Public Financial
+                                    Enterprises Agency, the newly assigned CEO of Ethiopian Insurance Corporation, Ato Netsanet Lemessa, EICs managements, all staff in Addis and outline branches around Addis Ababa.</p>
+                            </div>
+                            <div class="btn-text">
+                                <a href="about-us">Read more >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--==================== Lates Blog Area End  ====================-->
+
+    </div>
+    <div class=" section-space--ptb_90"></div>
+    <!--====================  footer area ====================-->
+    <div class="footer-area-wrapper ">
+        <div class="footer-area section-space--ptb_120 bg-img footer-bg--overlay">
+            <div class="container">
+                <div class="row footer-widget-wrapper">
+                    <div class="col-lg-4 col-md-12 col-sm-12 footer-widget">
+                        <div class="footer-widget__logo mb-30">
+                            <img src="{% static 'images/img/logo-final.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="footer-widget-dic">
+
+                            <p class="footer-dec"></p>
+
+                            <div class="newsletter-footer-wrap mt-20">
+                                <h5 class="mb-10">Subscribe Newsletter</h5>
+                                <p>Subscribe our newsletter and get latest update about our offers, promotions and adds</p>
+                                <div class="newsletter-footer mt-20">
+                                    <form action="#" class="widget-newsletter-form">
+                                        <input type="text" placeholder="Enter your email">
+                                        <div class="subscribe-button">
+                                            <button class="subscribe-btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <div class="coustom-row-in-footer">
+                            <div class="footer-widget-coustom-col footer-widget">
+                                <h4 class="footer-widget__title mb-20 text-white">Useful Links</h4>
+                                <ul class="footer-widget__item-list">
+                                    <li><a href="landing-page" class="hover-style-link">Home</a></li>
+                                    <li><a href="about-us" class="hover-style-link">About us</a></li>
+                                    <li><a href="product&services" class="hover-style-link">Our Services</a></li>
+                                    <li><a href="contact-us" class="hover-style-link">Contact us</a></li>
+                                    <li><a href="blog-grid" class="hover-style-link">Blog Post</a></li>
+
+                                    <li><a href="contact-us" class="hover-style-link">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget-coustom-col footer-widget">
+                                <h4 class="footer-widget__title mb-20 text-white">Contact Info</h4>
+                                <div class="footer-widget__list">
+                                    <div class="single-footer-widger">
+                                        <h5>Address</h5>
+                                        <p>Address: 2Q63+R2P, Ras Mekonen Ave, Addis Ababa</p>
+                                    </div>
+                                    <div class="single-footer-widger">
+                                        <h5>Phone</h5>
+                                        <p>+251-11-551-2400</p>
+                                    </div>
+                                    <div class="single-footer-widger">
+                                        <h5>Email</h5>
+                                        <p>
+                                            <a href="mailto:eic.mdxvs@eic-et.com">eic.mdxvs@eic-et.com</a> <br>
+                                            <a href="mailto:bdrm@eic-et.com">bdrm@eic-et.com</a> <br>
+                                            <a href="mailto:comesaycard@eic-et.com">comesaycard@eic-et.com </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-4 col-sm-6 footer-widget">
+                        
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area mt-25 mb-25">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright-text">Copyright &copy; <a href="https://hasthemes.com/" target="_blank" >All Rights Reserved.</a> Ethiopia Insurance Corporation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of footer area  ====================-->
+
+
+
+
+
+
+
+
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top fa fa-angle-double-up"></i>
+        <i class="arrow-bottom fa fa-angle-double-up"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="landing-page">
+                                    <img src="{% static 'images/img/logo-final.png' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children">
+                            <a href="landing-page">Home</a>
+
+                        </li>
+                        <li class="has-children">
+                            <a href="about-us">About</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="product&services">Product & services</a>
+                            <ul class="sub-menu">
+                                <li><a href="#"><span>Vehicle Insurance </span></a></li>
+                                <li><a href="#"><span>Long term Vehicle Insurance</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="blog">Blog</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="contact-us"><span>Contact</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="{%static 'js/plugins/swiper.min.js' %}"></script>
+
+    <!-- Waypoints JS -->
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+
+    <!-- Counter down JS -->
+    <script src="{% static 'js/plugins/countdown.min.js' %}"></script>
+
+    <!-- Isotope JS -->
+    <script src="{% static 'js/plugins/isotope.min.js' %}"></script>
+
+    <!-- Masonry JS -->
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+
+    <!-- ImagesLoaded JS -->
+    <script src="{% static 'js/plugins/images-loaded.min.js' %}"></script>
+
+    <!-- Counterup JS -->
+    <script src="{% static 'js/plugins/counterup.min.js' %}"></script>
+
+    <!-- WOW JS -->
+    <script src="{% static 'js/plugins/wow.min.js' %}"></script>
+
+    <!-- AOS JS -->
+    <script src="{% static 'js/plugins/aos.js' %}"></script>
+
+    <!-- Some plugins JS -->
+    <script src="{% static 'js/plugins/some-plugins.js' %}"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+    <!--
+    <script src="js/plugins/plugins.min.js"></script>
+    -->
+
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

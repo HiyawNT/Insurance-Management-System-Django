@@ -1,0 +1,96 @@
+{% extends 'manager/adminbase.html' %}
+{% block content %}
+{%load static%}
+<style>
+  .t-row th{
+    margin:20px;
+  }
+</style>
+<head>
+    <!-- Bootstrap css-->
+    <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 400px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Policy Holder Form</h6>
+    </div>
+    <table class="table table-responsive table-hover" id="dev-table">
+      <thead>
+        <tr>
+        <th >Serial No.</th>
+          <th>Customer</th>
+          <!--<th>Vehicle Policy</th> -->
+          <th>Policy Name</th>
+          <th>Applied Date</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Proposer Age</th>
+          <th>Proposer Address</th>
+          <th>Proposer Profession</th>
+          <th>Phone No</th>
+          <th>P.O Box</th>
+          <th>Licence No</th>
+          <th>Date From</th>
+          <th>Date To</th>
+          <th>Plate No</th>
+          <th>Vehicle Name</th>
+          <th>Vehicle Model</th>
+          <th>Manufucture Year</th>
+          <th>Purchase Year</th>
+          <th>Price Of Car</th>
+          <th></th>
+          
+        </tr>
+      </thead>
+      {% for t in vehiclepolicy %}
+      <tr>
+        <td> {{ forloop.counter }}</td>
+        <td> {{t.customer}}</td>
+        <td> {{t.policy_number}}</td>
+        <td>{{t.creation_date}}</td>
+        <td>{{t.proposer_name}}</td>
+        <td> {{t.father_name}}</td>
+        <td> {{t.age}}</td>
+        <td>{{t.address}}</td>
+        <td>{{t.profession}}</td>
+        <td> {{t.phone_no}}</td>
+        <td> {{t.pobox}}</td>
+        <td>{{t.licenceno}}</td>
+        <td>{{t.durationfrom}}</td>
+        <td> {{t.durationto}}</td>
+        <td> {{t.plateno}}</td>
+        <td>{{t.vehiclename}}</td>
+        <td>{{t.vehiclemodel}}</td>
+        <td> {{t.yearofmanufacture}}</td>
+        <td>{{t.yearofpurchase}}</td>
+        <td>{{t.priceofcar}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

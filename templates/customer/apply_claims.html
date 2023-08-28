@@ -1,0 +1,86 @@
+{% extends 'customer/customerbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+     <!-- Bootstrap css-->
+     
+     <link href="{% static 'css/vendor/bootstrap.css' %}" rel="stylesheet">
+     <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet">
+
+     <!-- jQuery JS -->
+     <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+ 
+     <!-- Bootstrap JS -->
+     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+     <link href="{% static 'css/vendor/fontawesome-all.min.css' %}" rel="stylesheet">
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+       label #sidebar_btn {
+      z-index: 1;
+      color: #fff;
+      position: fixed;
+      cursor: pointer;
+      left: 300px;
+      padding-left: 60px;
+      margin-top:15px;
+      font-size: 20px;
+      
+      transition: 0.5s;
+      transition-property: color;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Available Claims</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+        <th>Serial No.</th>
+          <th>Insurance Type</th>
+          <th> Policy Number</th>
+          <th> Vehicle Name</th>
+          <th> Vehicle Model</th>
+          <th> From</th>
+          <th> To</th>
+          <th> Apply</th>
+          
+        </tr>
+      </thead>
+      {% for t in claims %}
+      <tr>
+        <td> {{ forloop.counter }}</td>
+        <td> {{t.policychoice}}</td>
+        <td> {{t.policy_number}}</td>
+        <td> {{t.vehiclename}}</td>
+        <td> {{t.vehiclemodel}}</td>
+
+  
+        <td> {{t.durationfrom}}</td>
+        <td> {{t.durationto}}</td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'claim_form' t.id  %}">Apply</a></td> 
+        <!--<td><a class="btn btn-danger btn-xs" href="policy-form">Apply</a></td> -->
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
